@@ -20,10 +20,10 @@ class Game
     @players.each do|player|
       die = Die.new
       number_rolled = die.roll
-      case
-      when number_rolled < 3
+      case number_rolled
+      when 1..2
         player.blam
-      when number_rolled < 5 && number_rolled > 2
+      when 3..4
         puts "#{player.name} is skipped"
       else player.w00t
       end
@@ -32,8 +32,8 @@ class Game
   end
 end
 
-# case <= WHY DOES ONLY EMPTY CASE WORK AND NOT OTHERS???!! IS IT OKAY TO USE EMPTY CASE???
-# when number_rolled < 3
+# case number_rolled
+# when number_rolled < 3 (웬 케이스 쓸 때는 경우가 확실해야함. 범위를 주지 말고)
 #   player.blam
 # when number_rolled < 5 && number_rolled > 2
 #   puts "#{player.name} is skipped"
