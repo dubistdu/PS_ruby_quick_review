@@ -11,7 +11,7 @@ class Player
   end
 
   def to_s
-   "I'm #{@name} with a health of #{@health} and a score of #{score}"
+    "I'm #{@name} with a health of #{@health} and a score of #{score}"
   end
 
   def blam
@@ -25,9 +25,8 @@ class Player
   end
 
   def strong?
-    @health >= 100 ? "strong":"weak"
+    @health >= 100 ? "strong" : "weak"
   end
-
 end
 
 if __FILE__ == $0
@@ -39,7 +38,6 @@ if __FILE__ == $0
   player.blam
   puts player.health
 end
-
 
 # The if expression there does something special: it only runs the enclosing code
 # if the name of the current source file (__FILE__) is the same as the name of the

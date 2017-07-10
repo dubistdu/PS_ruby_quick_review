@@ -13,7 +13,7 @@ describe Game do
   it "w00ts the player if a high number is rolled" do
     allow_any_instance_of(Die).to receive(:roll).and_return(5)
     @game.play
-    expect(@player.health).to eq(@initial_health+15)
+    expect(@player.health).to eq(@initial_health + 15)
   end
 
   it "skips the player if medium number is rolled" do
